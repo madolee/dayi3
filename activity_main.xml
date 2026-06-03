@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- 헤더 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="근무 알림"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 상태 표시 -->
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="상태: 비활성화됨"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"
+        android:padding="12dp"
+        android:background="@drawable/rounded_background"
+        android:textColor="@android:color/white" />
+
+    <!-- 일정 표시 -->
+    <TextView
+        android:id="@+id/scheduleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="다음 알림: 매일 09:00"
+        android:textSize="14sp"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:background="@drawable/rounded_background_light"
+        android:textColor="@android:color/darker_gray" />
+
+    <!-- 설명 텍스트 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="매일 아침 9시에 백엔드 서버에서 근무 정보를 받아 알림을 표시합니다."
+        android:textSize="12sp"
+        android:layout_marginBottom="24dp"
+        android:textColor="@android:color/darker_gray" />
+
+    <!-- 버튼 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:spacing="8dp">
+
+        <!-- 활성화 버튼 -->
+        <Button
+            android:id="@+id/enableButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="알림 활성화"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@android:color/holo_green_dark" />
+
+        <!-- 비활성화 버튼 -->
+        <Button
+            android:id="@+id/disableButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="알림 비활성화"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@android:color/holo_red_dark" />
+
+        <!-- 테스트 버튼 -->
+        <Button
+            android:id="@+id/testButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="테스트 알림"
+            android:textSize="16sp"
+            android:backgroundTint="@android:color/holo_blue_dark" />
+
+    </LinearLayout>
+
+    <!-- 정보 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp"
+        android:gravity="bottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="근무 상태 코드"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 8: 오전 근무\n• 13: 오후 근무\n• 21, 22: 야근\n• 87, 88: 휴일"
+            android:textSize="12sp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="버전 1.0.0"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/darker_gray" />
+
+    </LinearLayout>
+
+</LinearLayout>
